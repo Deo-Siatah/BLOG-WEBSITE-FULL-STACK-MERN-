@@ -49,7 +49,7 @@ exports.getAllposts = async(req,res) => {
         const posts = await Post.find()
             .populate('category','name slug')
             .sort({createdAt: -1});
-         //console.log(posts);
+         console.log("posts fetched:",posts.length);
         res.status(200).json(posts);
        
     } catch (error){
