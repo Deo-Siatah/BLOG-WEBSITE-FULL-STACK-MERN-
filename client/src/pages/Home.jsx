@@ -9,6 +9,7 @@ import axios from "axios";
 function Home () {
     const [posts,setPosts] = useState([]);
     const [loading ,setLoading] = useState(true);
+    const [searchTerm,setSearchTerm] = useState("");
 
     const fetchPosts = async() => {
         try{
@@ -26,7 +27,13 @@ function Home () {
         fetchPosts();
     },[]);
 
-    return(
+    const filteredPosts = posts.filter(
+        (post) => 
+            post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            post.content.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    return (
         <div>
             {/*Hero section*/}
             <section className="relative h-[30vh] sm:h-[70vh] md:h-[75vh]  rounded-b-lg overflow-hidden">
@@ -43,6 +50,9 @@ function Home () {
                  <Link to="/blogs" className="mt-6 inline-block bg-white text-black px-6 py-2 rounded-lg shadow hover:bg-gray-200 ">
                  Explore Blogs
                  </Link>
+                 <Link to="/create" className="mt-6 inline-block bg-white text-black px-4 py-2 rounded-lg shadow hover:bg-gray-200 ml-10"> 
+                 ➕ Add Blog 
+                 </Link>
                 </div>
               </div>
             </section>
@@ -50,14 +60,23 @@ function Home () {
             {/*Latest Posts */}
             <section className="py-12 px-4 md:px-8 max-w-6xl mx-auto">
                 <h2 className="text-2xl font-semibold mb-6">📄 Latest Posts</h2>
-
+            {/*Search Input*/}
+            <div className="mb-8">
+                <input
+                    type="text"
+                    placeholder="Search blog titles or content..."
+                    className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
+            </div>
                 {loading ? (
                     <p>Loading...</p>
-                ) : posts.length === 0 ? (
+                ) : filteredPosts.length === 0 ? (
                     <p>No posts found. Please check back later!</p>
                 ) : (
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        {posts.map((post) => (
+                        {filteredPosts.map((post) => (
                             <BlogCard key={post._id} post={post}/>
                         ))}
 
