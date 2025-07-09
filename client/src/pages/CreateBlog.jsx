@@ -64,7 +64,7 @@ function CreateBlog() {
     };
 
     return (
-        <div className="max-w-3xl mx-auto px-4 py-8 text-black">
+        <div className="max-w-3xl mx-auto px-4 py-8 text-black dark:text-white">
             <h1 className="text-2xl font-bold mb-6">📝Create a New Blog Post</h1>
 
             {error && <p className="text-red-500 mb-4">{error}</p>}
