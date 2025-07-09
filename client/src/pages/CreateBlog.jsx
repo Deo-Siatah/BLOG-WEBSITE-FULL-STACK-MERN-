@@ -72,10 +72,10 @@ function CreateBlog() {
             <form onSubmit={handleSubmit} className="space-y-6">
                 {/*Title*/}
                 <div>
-                    <label className="block mb-1 font-medium">Title *</label>
+                    <label className="block mb-1 font-medium ">Title *</label>
                     <input
                         type="text"
-                        className="w-full bg-gray-200 border border-gray-700 px-4 py-2 rounded"
+                        className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded dark:text-black"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
