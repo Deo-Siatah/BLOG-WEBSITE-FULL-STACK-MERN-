@@ -15,11 +15,13 @@ function CreateBlog() {
     const [excerpt,setExcerpt] = useState("");
     const navigate = useNavigate();
 
+    const API_BASE = import.meta.env.VITE_API_URL;
+
     //Fetch categories on mount 
     useEffect(() => {
         const fetchCategories = async() => {
         try{
-            const res = await axios.get("http://localhost:5000/api/categories");
+            const res = await axios.get(`${API_BASE}/api/categories`);
             setCategories(res.data);
         }catch (err){
             console.error("Error fetching categories:",err);
@@ -52,7 +54,7 @@ function CreateBlog() {
                 featuredImage: imageUrl || undefined
             };
 
-            await axios.post("http://localhost:5000/api/posts",postData);
+            await axios.post(`${API_BASE}/api/posts`,postData);
             navigate("/blogs");
         } catch (err) {
             console.error("Error creating post:",err);

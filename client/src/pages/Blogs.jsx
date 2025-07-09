@@ -2,15 +2,18 @@ import {useState,useEffect} from 'react';
 import axios from "axios";
 import BlogCard from '@/components/BlogCard';
 
+
 const Blogs = () => {
     const [posts,setPosts] = useState([]);
     const [visibleCount,setVisibleCount] = useState(5);
     const [loading, setLoading] = useState(true);
 
+    const API_BASE = import.meta.env.VITE_API_URL;
+
     //fetch all posts once 
     const fetchPosts = async () => {
         try{
-            const res = await axios.get("http://localhost:5000/api/posts");
+            const res = await axios.get(`${API_BASE}/api/posts`);
             setPosts(res.data);
         }catch (error){
             console.error("❌ Error fetching all posts:",error);

@@ -12,8 +12,8 @@ function Navbar() {
         <nav className="bg-gray-900 text-white dark:bg-zinc-900 border-b border-gray-200 dark:border-zinc-700 shadow-md sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
             {/* Logo /Site Name*/}
-            <Link to="/" className="text-xl font-bold text-blue-600 dark:text-white">
-                🌐Webtalks.io
+            <Link to="/" className="text-xl font-bold text-blue-600 dark:text-white ">
+                <span className=" border border-white px-2 py-1 rounded">🌐Webtalks.io</span>
             </Link>
             {/*Hamburger Icon*/}
             <div className="md:hidden">

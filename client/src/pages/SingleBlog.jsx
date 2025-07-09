@@ -8,9 +8,11 @@ const SingleBlog = () => {
     const [post,setPost] = useState(null);
     const [loading,setLoading] = useState(true);
 
+    const API_BASE = import.meta.env.VITE_API_URL;
+
     const fetchPost = async() => {
         try{
-            const res = await axios.get(`http://localhost:5000/api/posts/${id}`);
+            const res = await axios.get(`${API_BASE}/api/posts/${id}`);
             setPost(res.data);
         } catch (error) {
             console.error("Error fetching single post",error);

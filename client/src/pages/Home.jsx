@@ -11,9 +11,11 @@ function Home () {
     const [loading ,setLoading] = useState(true);
     const [searchTerm,setSearchTerm] = useState("");
 
+    const API_BASE = import.meta.env.VITE_API_URL;
+
     const fetchPosts = async() => {
         try{
-            const res = await axios.get("http://localhost:5000/api/posts");
+            const res = await axios.get(`${API_BASE}/api/posts`);
             const latestPosts = res.data.slice(0,3);
             setPosts(latestPosts);
         } catch (error){
