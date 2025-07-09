@@ -36,7 +36,7 @@ function Navbar() {
           </div>
           {/*Mobile Menu*/}
           {isOpen && (
-            <div className="md:hidden text-white px-4 pb-4 space-y-2 bg-white dark:bg-zinc-900">
+            <div className="md:hidden text-black dark:text-white px-4 pb-4 space-y-2 bg-white dark:bg-zinc-900">
                 <Link to="/" onClick={closeMenu} className="block">Home</Link>
                 <Link to="/about" onClick={closeMenu} className="block">About</Link>
                 <Link to="/contact" onClick={closeMenu} className="block">Contact</Link>
