@@ -75,7 +75,7 @@ function CreateBlog() {
                     <label className="block mb-1 font-medium ">Title *</label>
                     <input
                         type="text"
-                        className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded dark:text-white"
+                        className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded text-white dark:text-white"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
@@ -86,7 +86,7 @@ function CreateBlog() {
                     <label className="block mb-1 font-medium">Slug *</label>
                     <input
                         type="text"
-                        className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded dark:text-white"
+                        className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded text-white dark:text-white"
                         value={slug}
                         onChange={(e) => setSlug(e.target.value)}
                         placeholder="i.e mern-stack-blog"
@@ -98,7 +98,7 @@ function CreateBlog() {
                 <div>
                     <label className="block mb-1 font-medium">Excerpt</label>
                     <textarea
-                        className="w-full bg-gray-200 border border-gray-700 px-4 py-2 rounded h-40"
+                        className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded h-40 text-white dark:text-white"
                         value={excerpt}
                         onChange={(e) => setExcerpt(e.target.value)}
                         placeholder="write a short summary of the post"
@@ -110,7 +110,7 @@ function CreateBlog() {
                 <div>
                     <label className="block mb-1 font-medium">Content *</label>
                     <textarea
-                        className="w-full bg-gray-200 border border-gray-700 px-4 py-2 rounded h-40"
+                        className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded h-40 text-white dark:text-white"
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                         placeholder="write the main content for your blog.."
@@ -123,7 +123,7 @@ function CreateBlog() {
                     <label className="block mb-1 font-medium">Image URL </label>
                     <input
                         type="text"
-                        className="w-full bg-gray-200 border border-gray-700 px-4 py-2 rounded"
+                        className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded text-white dark:text-white"
                         value={imageUrl}
                         onChange={(e) => setImageUrl(e.target.value)}
                     />
@@ -132,7 +132,7 @@ function CreateBlog() {
                 <div>
                     <label className="block mb-1 font-medium">Category *</label>
                     <select
-                      className="w-full bg-gray-200 border border-gray-700 px-4 py-2 rounded"
+                      className="w-full bg-gray-500 border border-gray-700 px-4 py-2 rounded"
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
                       required
