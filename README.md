@@ -1,3 +1,43 @@
+📝 Full Stack Blog Website (MERN)
+Welcome to my first full-stack blog project, built with the MERN Stack (MongoDB, Express, React, Node.js)!
+This app allows users to explore blog posts, filter by category, view individual blogs, and even add their own posts.
+
+🌐 Live Demo
+👉 Click here to view the live site
+
+Backend API: https://your-backend-link.onrender.com
+
+🚀 Features
+💡 Create and publish blog posts
+🗂️ Categorize blogs with tags
+🔍 Search through latest posts
+📄 View full blog content with images
+🧾 Simple and responsive UI (built with Tailwind CSS)
+🔧 Backend API with Express.js and MongoDB
+⚙️ Full CRUD support for blogs and categories
+🛠️ Tech Stack
+Frontend
+
+React
+Tailwind CSS
+Axios
+React Router DOM
+Vite
+Backend
+
+Node.js
+Express.js
+MongoDB (with Mongoose)
+Dotenv
+Cors
+📂 Folder Structure
+BLOG-WEBSITE-FULL-STACK-MERN/ ├── client/ # Frontend code (React + Vite) │ ├── src/ │ └── public/ ├── server/ # Backend code (Express + MongoDB) │ ├── routes/ │ ├── models/ │ └── controllers/ ├── .env # Environment variables (not committed) ├── package.json └── README.md
+
+⚙️ Getting Started (Local Setup)
+Prerequisites
+Node.js + pnpm or npm
+MongoDB Atlas account (or use local MongoDB)
+1. Clone the Repository
 git clone https://github.com/yourusername/BLOG-WEBSITE-FULL-STACK-MERN.git
 cd BLOG-WEBSITE-FULL-STACK-MERN
 
