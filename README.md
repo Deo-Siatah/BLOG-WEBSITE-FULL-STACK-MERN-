@@ -3,7 +3,7 @@ Welcome to my first full-stack blog project, built with the MERN Stack (MongoDB,
 This app allows users to explore blog posts, filter by category, view individual blogs, and even add their own posts.
 
 🌐 Live Demo
-👉 Click here to view the live site
+👉 Click here to view the live site https://blog-webtalks-frontend-site-1.onrender.com
 
 Backend API: https://your-backend-link.onrender.com
 
